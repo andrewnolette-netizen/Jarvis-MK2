@@ -1,29 +1,7 @@
-# Core dependencies
-asyncio
-typing-extensions; python_version < "3.8"
-
-# Configuration
-pyyaml
-
-# Logging
-# (using built-in logging)
-
-# System monitoring
-psutil
-
-# For future AI integrations
-# ollama
-# transformers
-# torch
-
-# For future voice capabilities
-# speechrecognition
-# pyttsx3
-
-# For future vision capabilities
-# opencv-python
-# pillow
-
-# For testing
-pytest
-pytest-asyncio
+pvporcupine
+vosk
+sounddevice
+TTS
+numpy
+pyzmq
+PyQt6

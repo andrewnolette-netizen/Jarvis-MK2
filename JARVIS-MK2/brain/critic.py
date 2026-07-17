@@ -74,7 +74,10 @@ class Critic:
         if review["issues"]:
             review["approved"] = False
             # Adjust confidence based on number of issues
-            review["confidence"] = max(0.1, 0.8 - (len(review["issues"]) * 0.1))
+            # Reduce confidence by 0.1 for each issue, but not below 0.1
+            reduction = len(review["issues"]) * 0.1
+            new_confidence = 0.8 - reduction
+            review["confidence"] = max(0.1, new_confidence)
 
         # Add some general comments
         if "priority" not in decision:
@@ -136,6 +139,9 @@ class Critic:
             review["suggestions"].append("Provide at least one task in the plan")
             return review
 
+        # Define backup-related terms to look for
+        backup_terms = ["backup", "back up", "backing up", "backed up"]
+
         # Check each task for potential issues
         for i, task in enumerate(plan):
             task_id = task.get("id", f"unknown_task_{i}")
@@ -144,7 +150,9 @@ class Critic:
 
             # Example check: if a task mentions deleting files without backup, flag it
             if "delete" in title or "delete" in description:
-                if "backup" not in title and "backup" not in description:
+                # Check if any backup term is present in title or description
+                has_backup = any(term in title or term in description for term in backup_terms)
+                if not has_backup:
                     issue = f"Task '{task_id}' involves deletion without mention of backup"
                     self.logger.debug(issue)
                     review["issues"].append(issue)
@@ -179,7 +187,9 @@ class Critic:
             self.logger.debug("Plan has issues, marking as not approved")
             review["approved"] = False
             # We might adjust confidence based on number of issues
-            review["confidence"] = max(0.1, 0.8 - (len(review["issues"]) * 0.1))
+            reduction = len(review["issues"]) * 0.1
+            new_confidence = 0.8 - reduction
+            review["confidence"] = max(0.1, new_confidence)
 
         # Add some general comments
         if len(plan) > 5:

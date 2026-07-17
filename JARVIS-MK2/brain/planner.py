@@ -7,7 +7,7 @@ from typing import Any, Dict, List, Optional
 
 from core.logger import get_logger
 from core.events import publish
-from tasks.task_manager import TaskManager, TaskStatus
+from tasks.task_manager import TaskManager, task_manager as global_task_manager
 
 logger = get_logger(__name__)
 
@@ -15,10 +15,10 @@ logger = get_logger(__name__)
 class Planner:
     """Plans and decomposes goals into tasks."""
 
-    def __init__(self):
+    def __init__(self, task_manager: Optional[TaskManager] = None):
         """Initialize the planner."""
         self.logger = get_logger(__name__)
-        self.task_manager = TaskManager()
+        self.task_manager = task_manager if task_manager is not None else global_task_manager
 
     async def create_plan(self, goal: str) -> List[Dict[str, Any]]:
         """

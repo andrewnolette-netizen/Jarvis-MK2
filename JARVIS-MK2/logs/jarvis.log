@@ -36,3 +36,69 @@
 2026-07-16 22:41:59,059 - brain.critic - WARNING - Decision is missing an action
 2026-07-16 22:41:59,059 - memory.long_term - INFO - No existing long-term memory found at data/memory.json
 2026-07-16 22:41:59,059 - tasks.task_manager - INFO - Created task TASK-D7737C09: Test Task
+2026-07-17 12:04:39,963 - core.controller - INFO - Initialization complete
+2026-07-17 12:04:39,963 - core.controller - INFO - Starting JARVIS-MK2...
+2026-07-17 12:04:54,130 - core.controller - INFO - Initialization complete
+2026-07-17 12:04:54,130 - brain.planner - INFO - Creating plan for goal: Test goal
+2026-07-17 12:04:54,147 - tasks.task_manager - INFO - Created task TASK-FF2A3D37: Achieve goal: Test goal
+2026-07-17 12:04:54,148 - brain.decision_engine - INFO - Making decision from 2 options
+2026-07-17 12:04:54,148 - brain.critic - INFO - Reviewing decision
+2026-07-17 12:04:54,148 - brain.critic - WARNING - Decision is missing an action
+2026-07-17 12:04:54,148 - memory.long_term - INFO - No existing long-term memory found at data/memory.json
+2026-07-17 12:04:54,148 - tasks.task_manager - INFO - Created task TASK-0465EF63: Test Task
+2026-07-17 12:13:53,590 - core.controller - INFO - Initialization complete
+2026-07-17 12:13:53,590 - brain.planner - INFO - Creating plan for goal: Test goal
+2026-07-17 12:13:53,591 - tasks.task_manager - INFO - Created task TASK-3CAC7C70: Achieve goal: Test goal
+2026-07-17 12:13:53,591 - brain.decision_engine - INFO - Making decision from 2 options
+2026-07-17 12:13:53,591 - brain.critic - INFO - Reviewing decision
+2026-07-17 12:13:53,591 - brain.critic - WARNING - Decision is missing an action
+2026-07-17 12:13:53,591 - memory.long_term - INFO - No existing long-term memory found at data/memory.json
+2026-07-17 12:13:53,591 - tasks.task_manager - INFO - Created task TASK-28CB9634: Test Task
+2026-07-17 12:19:37,778 - core.controller - INFO - Initialization complete
+2026-07-17 12:19:37,779 - brain.planner - INFO - Creating plan for goal: Test goal
+2026-07-17 12:19:37,779 - tasks.task_manager - INFO - Created task TASK-68311BE6: Achieve goal: Test goal
+2026-07-17 12:19:37,779 - brain.decision_engine - INFO - Making decision from 2 options
+2026-07-17 12:19:37,779 - brain.critic - INFO - Reviewing decision
+2026-07-17 12:19:37,779 - brain.critic - WARNING - Decision is missing an action
+2026-07-17 12:19:37,779 - memory.long_term - INFO - No existing long-term memory found at data/memory.json
+2026-07-17 12:19:37,779 - tasks.task_manager - INFO - Created task TASK-3C8E7075: Test Task
+2026-07-17 12:28:33,838 - core.controller - INFO - Initialization complete
+2026-07-17 12:28:33,838 - brain.planner - INFO - Creating plan for goal: Test goal
+2026-07-17 12:28:33,838 - tasks.task_manager - INFO - Created task TASK-82DE3961: Achieve goal: Test goal
+2026-07-17 12:28:33,838 - brain.decision_engine - INFO - Making decision from 2 options
+2026-07-17 12:28:33,838 - brain.critic - INFO - Reviewing decision
+2026-07-17 12:28:33,838 - brain.critic - WARNING - Decision is missing an action
+2026-07-17 12:28:33,838 - memory.long_term - INFO - No existing long-term memory found at data/memory.json
+2026-07-17 12:28:33,839 - tasks.task_manager - INFO - Created task TASK-38BE12C1: Test Task
+2026-07-17 12:30:15,001 - core.controller - INFO - Initialization complete
+2026-07-17 12:30:15,001 - brain.planner - INFO - Creating plan for goal: Test goal
+2026-07-17 12:30:15,001 - tasks.task_manager - INFO - Created task TASK-090768F2: Achieve goal: Test goal
+2026-07-17 12:30:15,001 - brain.decision_engine - INFO - Making decision from 2 options
+2026-07-17 12:30:15,001 - brain.critic - INFO - Reviewing decision
+2026-07-17 12:30:15,001 - brain.critic - WARNING - Decision is missing an action
+2026-07-17 12:30:15,001 - memory.long_term - INFO - No existing long-term memory found at data/memory.json
+2026-07-17 12:30:15,002 - tasks.task_manager - INFO - Created task TASK-E9DF047D: Test Task
+2026-07-17 12:45:35,818 - core.controller - INFO - Initialization complete
+2026-07-17 12:45:35,818 - brain.planner - INFO - Creating plan for goal: Test goal
+2026-07-17 12:45:35,818 - tasks.task_manager - INFO - Created task TASK-84CBE386: Achieve goal: Test goal
+2026-07-17 12:45:35,818 - brain.decision_engine - INFO - Making decision from 2 options
+2026-07-17 12:45:35,818 - brain.critic - INFO - Reviewing decision
+2026-07-17 12:45:35,818 - brain.critic - WARNING - Decision is missing an action
+2026-07-17 12:45:35,818 - memory.long_term - INFO - No existing long-term memory found at data/memory.json
+2026-07-17 12:45:35,818 - tasks.task_manager - INFO - Created task TASK-4C429B91: Test Task
+2026-07-17 12:47:17,368 - core.controller - INFO - Initialization complete
+2026-07-17 12:47:17,368 - brain.planner - INFO - Creating plan for goal: Test goal
+2026-07-17 12:47:17,368 - tasks.task_manager - INFO - Created task TASK-F30F8375: Achieve goal: Test goal
+2026-07-17 12:47:17,368 - brain.decision_engine - INFO - Making decision from 2 options
+2026-07-17 12:47:17,368 - brain.critic - INFO - Reviewing decision
+2026-07-17 12:47:17,368 - brain.critic - WARNING - Decision is missing an action
+2026-07-17 12:47:17,368 - memory.long_term - INFO - No existing long-term memory found at data/memory.json
+2026-07-17 12:47:17,368 - tasks.task_manager - INFO - Created task TASK-0B678F42: Test Task
+2026-07-17 12:47:29,991 - core.controller - INFO - Initialization complete
+2026-07-17 12:47:29,991 - brain.planner - INFO - Creating plan for goal: Test goal
+2026-07-17 12:47:29,991 - tasks.task_manager - INFO - Created task TASK-FD48623A: Achieve goal: Test goal
+2026-07-17 12:47:29,991 - brain.decision_engine - INFO - Making decision from 2 options
+2026-07-17 12:47:29,991 - brain.critic - INFO - Reviewing decision
+2026-07-17 12:47:29,991 - brain.critic - WARNING - Decision is missing an action
+2026-07-17 12:47:29,991 - memory.long_term - INFO - No existing long-term memory found at data/memory.json
+2026-07-17 12:47:29,991 - tasks.task_manager - INFO - Created task TASK-6A56399E: Test Task
