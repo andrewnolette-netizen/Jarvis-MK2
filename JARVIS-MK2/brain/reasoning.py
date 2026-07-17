@@ -3,7 +3,7 @@ Reasoning module for JARVIS-MK2.
 Handles logical reasoning and inference.
 """
 
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional, Union, Callable
 
 from core.logger import get_logger
 from core.events import publish
@@ -18,7 +18,7 @@ class Reasoner:
         """Initialize the reasoner."""
         self.logger = get_logger(__name__)
         self.facts: dict[str, Any] = {}
-        self.rules: list[dict] = []
+        self.rules: list[dict] = []  # Each rule is a dict with 'condition' (callable) and 'conclusion' (any)
 
     def add_fact(self, key: str, value: Any) -> None:
         """
@@ -31,12 +31,12 @@ class Reasoner:
         self.facts[key] = value
         self.logger.debug(f"Added fact: {key} = {value}")
 
-    def add_rule(self, condition: callable, conclusion: Any) -> None:
+    def add_rule(self, condition: Callable[[dict], bool], conclusion: Any) -> None:
         """
         Add a rule to the knowledge base.
 
         Args:
-            condition: Function that takes facts and returns bool
+            condition: Function that takes the facts dict and returns True if the rule fires
             conclusion: What to conclude when condition is true
         """
         self.rules.append({"condition": condition, "conclusion": conclusion})
@@ -44,7 +44,7 @@ class Reasoner:
 
     def infer(self) -> List[Dict[str, Any]]:
         """
-        Run inference on the current knowledge base.
+        Run forward chaining inference on the current knowledge base.
 
         Returns:
             List of inferences made

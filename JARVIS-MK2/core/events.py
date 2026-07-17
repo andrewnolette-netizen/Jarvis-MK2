@@ -5,6 +5,7 @@ Provides publish-subscribe messaging between modules.
 
 import asyncio
 import inspect
+import time
 from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, List, Set
@@ -20,7 +21,16 @@ class Event:
     name: str
     data: Any = None
     source: str = ""
-    timestamp: float = field(default_factory=lambda: asyncio.get_event_loop().time())
+    timestamp: float = field(default_factory=lambda: _get_time())
+
+
+def _get_time() -> float:
+    """Get the current time, using the event loop if available, otherwise falling back to time.time."""
+    try:
+        return asyncio.get_event_loop().time()
+    except RuntimeError:
+        # No event loop running
+        return time.time()
 
 
 class EventManager:

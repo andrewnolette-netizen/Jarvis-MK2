@@ -16,3 +16,23 @@
 2026-07-16 22:37:14,224 - brain.critic - INFO - Reviewing decision
 2026-07-16 22:37:14,224 - memory.long_term - INFO - No existing long-term memory found at data/memory.json
 2026-07-16 22:37:14,226 - tasks.task_manager - INFO - Created task TASK-8D9B24FC: Test Task
+2026-07-16 22:40:55,765 - core.controller - INFO - Initialization complete
+2026-07-16 22:40:55,765 - brain.planner - INFO - Creating plan for goal: Test goal
+2026-07-16 22:40:55,766 - tasks.task_manager - INFO - Created task TASK-8D18E9D6: Achieve goal: Test goal
+2026-07-16 22:40:55,766 - brain.decision_engine - INFO - Making decision from 2 options
+2026-07-16 22:41:37,064 - core.controller - INFO - Initialization complete
+2026-07-16 22:41:37,064 - brain.planner - INFO - Creating plan for goal: Test goal
+2026-07-16 22:41:37,065 - tasks.task_manager - INFO - Created task TASK-93518A07: Achieve goal: Test goal
+2026-07-16 22:41:37,065 - brain.decision_engine - INFO - Making decision from 2 options
+2026-07-16 22:41:37,065 - brain.critic - INFO - Reviewing decision
+2026-07-16 22:41:37,065 - brain.critic - WARNING - Decision is missing an action
+2026-07-16 22:41:37,065 - memory.long_term - INFO - No existing long-term memory found at data/memory.json
+2026-07-16 22:41:37,065 - tasks.task_manager - INFO - Created task TASK-A798796C: Test Task
+2026-07-16 22:41:59,058 - core.controller - INFO - Initialization complete
+2026-07-16 22:41:59,058 - brain.planner - INFO - Creating plan for goal: Test goal
+2026-07-16 22:41:59,058 - tasks.task_manager - INFO - Created task TASK-9DE8C379: Achieve goal: Test goal
+2026-07-16 22:41:59,059 - brain.decision_engine - INFO - Making decision from 2 options
+2026-07-16 22:41:59,059 - brain.critic - INFO - Reviewing decision
+2026-07-16 22:41:59,059 - brain.critic - WARNING - Decision is missing an action
+2026-07-16 22:41:59,059 - memory.long_term - INFO - No existing long-term memory found at data/memory.json
+2026-07-16 22:41:59,059 - tasks.task_manager - INFO - Created task TASK-D7737C09: Test Task

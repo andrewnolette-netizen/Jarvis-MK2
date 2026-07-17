@@ -55,21 +55,23 @@ async def test_core_components():
 
     # Test planner
     planner = Planner()
-    plan = planner.create_plan("Test goal")
-    assert "goal" in plan
-    assert plan["goal"] == "Test goal"
+    plan = await planner.create_plan("Test goal")
+    assert isinstance(plan, list)
+    assert len(plan) > 0
+    assert "title" in plan[0]
     print("✓ Planner working")
 
     # Test decision engine
     decision_engine = DecisionEngine()
-    options = [{"priority": 1}, {"priority": 2}]
+    options = [{"priority": "HIGH", "risk": "LOW"}, {"priority": "LOW", "risk": "HIGH"}]
     decision = decision_engine.make_decision(options)
-    assert decision["priority"] == 2  # Should pick higher priority
+    assert "priority" in decision
+    assert decision["priority"] == "HIGH"  # Should pick the one with higher priority and lower risk
     print("✓ Decision engine working")
 
     # Test critic
     critic = Critic()
-    decision = {"priority": 1, "selected_at": 12345}
+    decision = {"priority": "HIGH", "selected_at": 12345}
     review = critic.review_decision(decision)
     assert "approved" in review
     print("✓ Critic working")
@@ -91,7 +93,7 @@ async def test_core_components():
     task = await task_manager.create_task(
         title="Test Task",
         description="A test task",
-        priority=1
+        priority=1  # integer priority
     )
     assert task.title == "Test Task"
     assert task.status == TaskStatus.CREATED
